@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Run API Server') {
             steps {
-                sh 'npm start &'
+                sh 'npm start'
             }
         }
         stage('Run Cypress Tests') {
