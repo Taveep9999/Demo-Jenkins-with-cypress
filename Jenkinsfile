@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Taveep9999/Demo-Jenkins-with-cypress.git'
+                git branch: 'main', url: 'https://github.com/Taveep9999/Demo-Jenkins-with-cypress.git'
             }
         }
         stage('Install Dependencies') {
