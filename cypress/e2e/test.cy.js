@@ -2,7 +2,7 @@ describe('API Testing', () => {
   it('GET / - should return sample data', () => {
     cy.request('GET', 'http://localhost:3000/')
       .its('body')
-      .should('eq', 'Hello World!');
+      .should('eq', 'Hello!');
 });
 
   it('GET /api/data - should return sample data', () => {
