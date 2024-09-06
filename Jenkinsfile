@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Run API Server') {
             steps {
-                sh 'npm start'
+                bat 'start npm start'
             }
         }
         stage('Run Cypress Tests') {
