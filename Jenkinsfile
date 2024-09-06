@@ -13,17 +13,17 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                bat 'npm install'
+                sh 'npm install'
             }
         }
         stage('Run API Server') {
             steps {
-                bat 'start /B npm start'
+                sh 'npm start &'
             }
         }
         stage('Run Cypress Tests') {
             steps {
-                bat 'npm run cypress:run'
+                sh 'npm run cypress:run'
             }
         }
     }
