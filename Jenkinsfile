@@ -13,24 +13,24 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Run API Server') {
             steps {
-                bat 'start npm start'
+                bat 'start /B npm start'
             }
         }
         stage('Run Cypress Tests') {
             steps {
-                sh 'npm run cypress:run'
+                bat 'npm run cypress:run'
             }
         }
     }
 
     post {
         always {
-            sh 'pkill node'
+            bat 'taskkill /F /IM node.exe /T'
         }
     }
 }
